@@ -1,3 +1,14 @@
+# Intro to Python for Libraries: API Focus
+
+
+This lesson has been adapted from Library Carpentry's Introduction to Python for Libararies course to focus specifically on the skills needed to create a basic API query using UBC Library's Open Collections API.
+
+
+Original introductory content has been preserved below, and the full original course can be found at: https://data-lessons.github.io/library-python-intro/
+
+
+
+
 # Library Carpentry
 
 The Library Carpentry module '[Introduction to programming with Python](https://data-lessons.github.io/library-python-intro/)' is maintained by [Carlos Martinez](https://github.com/c-martinez) and [Richard Vankoningsveld](https://github.com/richyvk).
