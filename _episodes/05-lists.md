@@ -122,14 +122,14 @@ Note that while `extend` maintains the "flat" structure of the list, appending a
 *   Not a function or a method, but a statement in the language.
 
 ~~~
-print('primes before removing last item:', primes)
-del primes[4]
-print('primes after removing last item:', primes)
+print('cities before removing the fifth item:', cities)
+del cities[4]
+print('cities after removing the fifth item:', cities)
 ~~~
 {: .python}
 ~~~
-primes before removing last item: [2, 3, 5, 7, 9]
-primes after removing last item: [2, 3, 5, 7]
+cities before removing last item: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax', 'Sydney', 'Brisbane', 'Darwin', 'Adelaide', 'Hobart', ['Paris', 'Marseille', 'Strasbourg', 'Nice']]
+cities after removing last item: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Sydney', 'Brisbane', 'Darwin', 'Adelaide', 'Hobart', ['Paris', 'Marseille', 'Strasbourg', 'Nice']]
 ~~~
 {: .output}
 
