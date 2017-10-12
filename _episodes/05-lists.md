@@ -77,7 +77,7 @@ subjects is now: [snakes, cats, hampsters, pets, fauna]
 cities = ['Vancouver', 'Ontario', 'Montreal']
 print('cities is initially:', cities)
 cities.append('Saskatoon')
-cities.append('Halifax)
+cities.append('Halifax')
 print('cities has become:', cities)
 ~~~
 {: .python}
