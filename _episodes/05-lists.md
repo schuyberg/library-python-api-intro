@@ -106,12 +106,14 @@ cities.append(french_cities)
 print('cities has finally become:', cities)
 ~~~
 {: .python}
+
+~~~
 cities is currently: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax']
 cities has now become: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax', 'Sydney', 'Brisbane', 'Darwin', 'Adelaide', 'Hobart']
 cities has finally become: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax', 'Sydney', 'Brisbane', 'Darwin', 'Adelaide', 'Hobart', ['Paris', 'Marseille', 'Strasbourg', 'Nice']]
-
 ~~~
 {: .output}
+
 Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result two-dimensional.
 
 ## Use `del` to remove items from a list entirely.
