@@ -3,13 +3,13 @@ layout: lesson
 root: .
 ---
 
-# Intro to Python for Libraries: API Focus
+> ## Adapted for LIBR 559S
+>
+> This lesson has been adapted (and truncated) from Library Carpentry's Introduction to Python for Libararies course to focus specifically on the skills needed to create a basic API query using UBC Library's Open Collections API.
+>
+> The full original course can be found at: [https://data-lessons.github.io/library-python-intro/]
 
-
-This lesson has been adapted from Library Carpentry's Introduction to Python for Libararies course to focus specifically on the skills needed to create a basic API query using UBC Library's Open Collections API.
-
-
-Original introductory content has been preserved below, and the full original course can be found at: https://data-lessons.github.io/library-python-intro/
+----
 
 
 This lesson is an introduction to programming in Python
@@ -22,15 +22,6 @@ This lesson references the Spyder IDE,
 but can be taught using a regular Python interpreter as well.
 Please note that this lesson uses Python 3 rather than Python 2.
 
-> ## Under Design
->
-> **This lesson is currently in its early design stage;
-> please check [the design notes]({{ page.root }}/design/)
-> to see what we have so far.
-> Contributions are very welcome:
-> we would be particularly grateful for exercises
-> and for commentary on the ones already there.**
-{: .callout}
 
 > ## Prerequisites
 >
