@@ -5,7 +5,7 @@ root: .
 
 > ## Adapted for LIBR 559S
 >
-> This lesson has been adapted (and truncated) from Library Carpentry's Introduction to Python for Libararies course to focus specifically on the skills needed to create a basic API query using UBC Library's Open Collections API.
+> This lesson has been adapted (and truncated) from Library Carpentry's Introduction to Python for Libararies course to focus specifically on the skills needed to create a basic API query using UBC Library's [Open Collections API](https://open.library.ubc.ca/research).
 >
 > The full original course can be found at: [https://data-lessons.github.io/library-python-intro/](https://data-lessons.github.io/library-python-intro/)
 

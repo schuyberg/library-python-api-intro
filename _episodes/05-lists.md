@@ -21,21 +21,21 @@ keypoints:
 ---
 ## A list stores many values in a single structure.
 
-*   Doing calculations with a hundred variables called `pressure_001`, `pressure_002`, etc.,
-    would be at least as slow as doing them by hand.
+*   Dealing with a hundred variables called `subject_001`, `subject_002`, etc.,
+    would be a wildly inefficient classification system
 *   Use a *list* to store many values together.
     *   Contained within square brackets `[...]`.
     *   Values separated by commas `,`.
 *   Use `len` to find out how many values are in a list.
 
 ~~~
-pressures = [0.273, 0.275, 0.277, 0.275, 0.276]
-print('pressures:', pressures)
-print('length:', len(pressures))
+subjects = [dogs, cats, hampsters, pets, fauna]
+print('subjects:', subjects)
+print('length:', len(subjects))
 ~~~
 {: .python}
 ~~~
-pressures: [0.273, 0.275, 0.277, 0.275, 0.276]
+subjects: [dogs, cats, hampsters, pets, fauna]
 length: 5
 ~~~
 {: .output}
@@ -45,13 +45,13 @@ length: 5
 *   Just like strings.
 
 ~~~
-print('zeroth item of pressures:', pressures[0])
-print('fourth item of pressures:', pressures[4])
+print('zeroth item of subjects:', subjects[0])
+print('fourth item of subjects:', subjects[4])
 ~~~
 {: .python}
 ~~~
-zeroth item of pressures: 0.273
-fourth item of pressures: 0.276
+zeroth item of subjects: dogs
+fourth item of subjects: fauna
 ~~~
 {: .output}
 
@@ -60,12 +60,12 @@ fourth item of pressures: 0.276
 *   Use an index expression on the left of assignment to replace a value.
 
 ~~~
-pressures[0] = 0.265
-print('pressures is now:', pressures)
+subjects[0] = snakes
+print('subjects is now:', subjects)
 ~~~
 {: .python}
 ~~~
-pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
+subjects is now: [snakes, cats, hampsters, pets, fauna]
 ~~~
 {: .output}
 
@@ -74,16 +74,17 @@ pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
 *   Use `list_name.append` to add items to the end of a list.
 
 ~~~
-primes = [2, 3, 5]
-print('primes is initially:', primes)
-primes.append(7)
-primes.append(9)
-print('primes has become:', primes)
+cities = ['Vancouver', 'Ontario', 'Montreal']
+print('cities is initially:', cities)
+cities.append('Saskatoon')
+cities.append('Halifax)
+print('cities has become:', cities)
 ~~~
 {: .python}
+
 ~~~
-primes is initially: [2, 3, 5]
-primes has become: [2, 3, 5, 7, 9]
+cities is initially: ['Vancouver', 'Ontario', 'Montreal']
+cities has become: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax']
 ~~~
 {: .output}
 
@@ -94,20 +95,21 @@ primes has become: [2, 3, 5, 7, 9]
 *   We will meet other methods of lists as we go along.
     *   Use `help(list)` for a preview.
 *   `extend` is similar to `append`, but it allows you to combine two lists.  For example:
+
+~~~
+australian_cities = ['Sydney', 'Brisbane', 'Darwin', 'Adelaide', 'Hobart']
+french_cities = ['Paris', 'Marseille', 'Strasbourg', 'Nice']
+print('cities is currently:', cities)
+cities.extend(australian_cities)
+print('cities has now become:', cities)
+cities.append(french_cities)
+print('cities has finally become:', cities)
 ~~~
 {: .python}
-teen_primes = [11, 13, 17, 19]
-middle_aged_primes = [37, 41, 43, 47]
-print('primes is currently:', primes)
-primes.extend(teen_primes)
-print('primes has now become:', primes)
-primes.append(middle_aged_primes)
-print('primes has finally become:', primes)
-~~~
-{: .python}
-primes is currently: [2, 3, 5, 7, 9]
-primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19]
-primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
+cities is currently: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax']
+cities has now become: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax', 'Sydney', 'Brisbane', 'Darwin', 'Adelaide', 'Hobart']
+cities has finally become: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon', 'Halifax', 'Sydney', 'Brisbane', 'Darwin', 'Adelaide', 'Hobart', ['Paris', 'Marseille', 'Strasbourg', 'Nice']]
+
 ~~~
 {: .output}
 Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result two-dimensional.

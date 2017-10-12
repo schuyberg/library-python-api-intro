@@ -83,14 +83,6 @@ NameError: name 'last_name' is not defined
 *   The last line of an error message is usually the most informative.
 *   We will look at error messages in detail [later]({{ page.root }}/05-error-messages/).
 
-> ## Variables Persist Between Cells
-> Variables defined in one cell exist in all other cells once executed,
-> so the relative location of cells in the notebook do not matter
-> (i.e., cells lower down can still affect those above).
-> Remember: Notebook cells are just a way to organize a program:
-> as far as Python is concerned,
-> all of the source code is one long set of instructions.
-{: .callout}
 
 ## Variables can be used in calculations.
 
@@ -187,33 +179,12 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 {: .python}
 
 *   Use meaningful variable names to help other people understand what the program does.
-*   The most important "other person" is your future self.
+*   The most important "other person" is your future self!
 
-> ## Swapping Values
->
-> Draw a table showing the values of the variables in this program
-> after each statement is executed.
-> In simple terms, what do the last three lines of this program do?
->
-> ~~~
-> x = 1.0
-> y = 3.0
-> swap = x
-> x = y
-> y = swap
-> ~~~
-> {: .python}
-> > ## Solution
-> >
-> > ~~~
-> > swap = x  #  x->1.0 y->3.0 swap->1.0
-> > x = y     #  x->3.0 y->3.0 swap->1.0
-> > y = swap  #  x->3.0 y->1.0 swap->1.0
-> > ~~~
-> > These three lines exchange the values in `x` and `y` using the `swap`
-> > variable for temporary storage. This is a fairly common programming idiom.
->{: .solution}
-{: .challenge}
+
+----
+
+
 
 > ## Predicting Values
 >
