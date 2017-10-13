@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 teaching: 10
-exercises: 5
+exercises: 10
 questions:
 - "How can I store multiple values?"
 objectives:

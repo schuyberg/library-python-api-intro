@@ -1,7 +1,7 @@
 ---
 title: "Requests"
 teaching: 15
-exercises: 15
+exercises: 20
 questions:
 - "What is a HTTP request?"
 - "How can I use `requests` to get data?"
@@ -586,6 +586,23 @@ https://oc-index.library.ubc.ca/collections
 ~~~
 {: .output}
 
+## Get at specific data values by transforming JSON into a dictionary
+
+*   The JSON structure may look familiar: It shares a 'key-value' structure with Python's 'dictionary' data type.
+*   The `json()` method we've been using from the `request` library converts the response JSON data into a dictionary.
+*   Use bracket notation to access the desired data.
+
+
+~~~
+import json
+
+human_readable = json.dumps(oc_collections.json(), indent=2*" ")
+print(human_readable)
+~~~
+{: .python}
+
+
+
 
 > ## Print the collection metadata for the Open Collection's 'arkley' collection
 >
@@ -612,23 +629,21 @@ https://oc-index.library.ubc.ca/collections
 > > `items = requests.get(https://oc-web.library.ubc.ca/collections/arkley/items?limit=100)`
 > > `print(json.dumps(response.json(), indent=2*" "))`
 > > `# copy an item id`
-> > `response = requests.get('https://oc-index.library.ubc.ca/collections/arkley/items/')`
+> > `response = requests.get('response = requests.get('https://oc-index.library.ubc.ca/collections/arkley/items/1.0010491')')`
 > > `print(json.dumps(response.json(), indent=2*" "))`
 > {: .solution}
 {: .challenge}
 
 
-> ## Print the item's description
+> ## Print the item's title, creator, and description
 > 
-> 
+> Hint: Look carefully at the JSON you pretty-printed. Remember, square brackets indicates a list and curly brackets a dictionary. Lists items are accessed by index and dictionary items by key.
 >
 > > ## Solution
 > >
-> > `import json, requests`
-> > `items = requests.get(https://oc-web.library.ubc.ca/collections/arkley/items?limit=100)`
-> > `print(json.dumps(response.json(), indent=2*" "))`
-> > `# copy an item id`
-> > `response = requests.get('https://oc-index.library.ubc.ca/collections/arkley/items/')`
-> > `print(json.dumps(response.json(), indent=2*" "))`
+> > `metadata = response.json()['data']`
+> > `print(metadata['Title'][0]['value'])`
+> > `print(metadata['Creator'][0]['value'])`
+> > `print(metadata['Description'][0]['value'])`
 > {: .solution}
 {: .challenge}
