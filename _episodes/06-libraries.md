@@ -141,59 +141,7 @@ Capitalise This Sentence Again Please.
 *   But can make programs harder to understand,
     since readers must learn your program's aliases.
 
-> ## Exploring the os Library
-> The os library provides a way of accessing operating system functionality.
->
-> 1. What function from the `os` library can you use to determine the current 
->    working directory?
->
-> > ## Solution
-> > 1. Using `help(os)` we see that we've got `os.getcwd()` which returns
-> >    a string representing the current working directory.
-> {: .solution}
-{: .challenge}
 
-> ## Locating the Right Module
->
-> Given the variables `year`, `month` and `day`, how would you generate a date in the standard iso format:
->
-> ~~~
-> year = 2016
-> month = 10
-> day = 22
-> ~~~
-> {: .python}
->
-> 1. Which [standard library][stdlib] module could help you?
-> 2. Which function would you select from that module?
-> 3. Try to write a program that uses the function.
->
-> > ## Solution
-> >
-> > The [datetime module](https://docs.python.org/3/library/datetime.html) seems like it could help you.
-> >
-> >
-> > You could use `date(year, month, date).isoformat()` to convert your date:
-> >
-> > ~~~
-> > import datetime
-> >
-> > iso_date = datetime.date(year, month, day).isoformat()
-> > print(iso_date)
-> > ~~~
-> > {: .python}
-> >
-> > or more compactly:
-> >
-> > ~~~
-> > import datetime
-> >
-> > print(datetime.date(year, month, day).isoformat())
-> > ~~~
-> > {: .python}
-> >
-> {: .solution}
-{: .challenge}
 
 > ## When Is Help Available?
 >
@@ -213,113 +161,16 @@ Capitalise This Sentence Again Please.
 > {: .solution}
 {: .challenge}
 
-> ## Importing With Aliases
+
+
+> ## Exploring the os Library
+> The os library provides a way of accessing operating system functionality.
 >
-> 1. Fill in the blanks so that the program below prints `0123456789`.
-> 2. Rewrite the program so that it uses `import` *without* `as`.
-> 3. Which form do you find easier to read?
->
-> ~~~
-> import string as s
-> numbers = ____.digits
-> print(____)
-> ~~~
-> {: .python}
+> 1. What function from the `os` library can you use to determine the current 
+>    working directory?
 >
 > > ## Solution
-> >
-> > ~~~
-> > import string as s
-> > numbers = s.digits
-> > print(numbers)
-> > ~~~
-> > {: .python}
-> >
-> > can be written as
-> >
-> > ~~~
-> > import string
-> > numbers = string.digits
-> > print(numbers)
-> > ~~~
-> > {: .python}
-> >
-> > Since you just wrote the code and are familiar with it, you might actually
-> > find the first version easier to read. But when trying to read a huge piece
-> > of code written by someone else, or when getting back to your own huge piece
-> > of code after several months, non-abbreviated names are often easier, expect
-> > where there are clear abbreviation conventions.
+> > 1. Using `help(os)` we see that we've got `os.getcwd()` which returns
+> >    a string representing the current working directory.
 > {: .solution}
 {: .challenge}
-
-> ## There Are Many Ways To Import Libraries!
->
-> Match the following print statements with the appropriate library calls
->
-> Library calls:
-> 1. `from string import digits`
-> 2. `import string`
-> 3. `import string as s`
->
-> Print commands:
-> 4. `print(list(s.digits))`
-> 5. `print(list(digits))`
-> 6. `print(string.ascii_uppercase)`
->
-> {: .python}
-{: .challenge}
-
-> ## Importing Specific Items
->
-> 1. Fill in the blanks so that the program below prints `90.0`.
-> 2. Do you find this version easier to read than preceding ones?
-> 3. Why *wouldn't* programmers always use this form of `import`?
->
-> ~~~
-> ____ math import ____, ____
-> angle = degrees(pi / 2)
-> print(angle)
-> ~~~
-> {: .python}
->
-> > ## Solution
-> >
-> > ~~~
-> > from math import degrees, pi
-> > angle = degrees(pi / 2)
-> > print(angle)
-> > ~~~
-> > {: .python}
-> >
-> > Most likely you find this version easier to read since it's less dense.
-> > The main reason not to use this form of import is to avoid name clashes.
-> > For instance, you wouldn't import `degrees` this way if you also wanted to
-> > use the name `degrees` for a variable or function of your own. Or if you
-> > were to also import a function named `degrees` from another library.
-> {: .solution}
-{: .challenge}
-
-> ## Reading Error Messages
->
-> 1. Read the code below and try to identify what the errors are without running it.
-> 2. Run the code, and read the error message. What type of error is it?
->
-> ~~~
-> import datetime
-> datetime.date(2017,13,1)
-> ~~~
-> {: .python}
->
-> > ## Solution
-> >
-> > 1. The date object takes arguments in the order year, month, day, so 13 is 
-> >    an invalid value for month.
-> > 2. You get an error of type "ValueError", indicating that the object
-> >    received an inappropriate argument value. The additional message
-> >    "month must be in 1..12" makes it clearer what the problem is.
-> {: .solution}
-{: .challenge}
-
-[pypi]: https://pypi.python.org/pypi/
-[stdlib]: https://docs.python.org/3/library/
-[randommod]: https://docs.python.org/3/library/random.html

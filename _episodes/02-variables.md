@@ -145,19 +145,6 @@ sod
 ~~~
 {: .output}
 
-## Use the built-in function `len` to find the length of a string.
-
-~~~
-print(len('helium'))
-~~~
-{: .python}
-~~~
-6
-~~~
-{: .output}
-
-*   Nested functions are evaluated from the inside out,
-    just like in mathematics.
 
 ## Python is case-sensitive.
 

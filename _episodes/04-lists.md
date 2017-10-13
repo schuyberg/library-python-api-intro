@@ -29,13 +29,13 @@ keypoints:
 *   Use `len` to find out how many values are in a list.
 
 ~~~
-subjects = [dogs, cats, hampsters, pets, fauna]
+subjects = ['dogs', 'cats', 'hampsters', 'pets', 'fauna']
 print('subjects:', subjects)
 print('length:', len(subjects))
 ~~~
 {: .python}
 ~~~
-subjects: [dogs, cats, hampsters, pets, fauna]
+subjects: ['dogs', 'cats', 'hampsters', 'pets', 'fauna']
 length: 5
 ~~~
 {: .output}
@@ -60,12 +60,13 @@ fourth item of subjects: fauna
 *   Use an index expression on the left of assignment to replace a value.
 
 ~~~
-subjects[0] = snakes
+subjects[0] = 'snakes'
 print('subjects is now:', subjects)
 ~~~
 {: .python}
+
 ~~~
-subjects is now: [snakes, cats, hampsters, pets, fauna]
+subjects is now: ['snakes', 'cats', 'hampsters', 'pets', 'fauna']
 ~~~
 {: .output}
 
@@ -137,68 +138,18 @@ cities after removing last item: ['Vancouver', 'Ontario', 'Montreal', 'Saskatoon
 
 *   Use `[]` on its own to represent a list that doesn't contain any values.
     *   "The zero of lists."
-*   Helpful as a starting point for collecting values
-    (which we will see in the [next episode]({{page.root}}/12-for-loops/)).
+*   Helpful as a starting point for collecting values.
 
 ## Lists may contain values of different types.
 
-*   A single list may contain numbers, strings, and anything else.
+*   A single list may contain numbers, strings, and anything else (even other lists, as we've seen!).
 
 ~~~
 goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 ~~~
 {: .python}
 
-## Character strings can be indexed like lists.
 
-*   Get single characters from a character string using indexes in square brackets.
-
-~~~
-element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
-~~~
-{: .python}
-~~~
-zeroth character: c
-third character: b
-~~~
-{: .output}
-
-## Character strings are immutable.
-
-*   Cannot change the characters in a string after it has been created.
-    *   *Immutable*: cannot be changed after creation.
-    *   In contrast, lists are *mutable*: they can be modified in place.
-*   Python considers the string to be a single value with parts,
-    not a collection of values.
-
-~~~
-element[0] = 'C'
-~~~
-{: .python}
-~~~
-TypeError: 'str' object does not support item assignment
-~~~
-{: .error}
-
-*   Lists and character strings are both *collections*.
-
-## Indexing beyond the end of the collection is an error.
-
-*   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
-    *   This is a kind of runtime error.
-    *   Cannot be detected as the code is parsed
-        because the index might be calculated based on data.
-
-~~~
-print('99th element of element is:', element[99])
-~~~
-{: .python}
-~~~
-IndexError: string index out of range
-~~~
-{: .output}
 
 > ## Fill in the Blanks
 >

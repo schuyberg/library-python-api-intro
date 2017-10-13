@@ -1,7 +1,7 @@
 ---
 title: "Built-in Functions and Help"
-teaching: 15
-exercises: 10
+teaching: 10
+exercises: 5
 questions:
 - "How can I use built-in functions?"
 - "How can I find out what they do?"
@@ -58,87 +58,35 @@ after
 ~~~
 {: .output}
 
-## Commonly-used built-in functions include `max`, `min`, and `round`.
 
-*   Use `max` to find the largest value of one or more values.
-*   Use `min` to find the smallest.
-*   Both work on character strings as well as numbers.
-    *   "Larger" and "smaller" use (0-9, A-Z, a-z) to compare letters.
-    *   This means that:
-        *   `'a'` is smaller than `'b'`
-        *   `'A'` is smaller than `'a'`
-        *   `'0'` is smaller than `'a'`
-    *   This is useful for ordering alphabetically.
+## Use the built-in function `len` to find the length of a string.
 
 ~~~
-print(max(1, 2, 3))
-print(min('a', 'b', 'c'))
-print(min('a', 'A'))
+print(len('helium'))
 ~~~
 {: .python}
 ~~~
-3
-a
-A
+6
 ~~~
 {: .output}
 
-## Functions may only work for certain (combinations of) arguments.
+*   Nested functions are evaluated from the inside out,
+    just like in mathematics.
 
-*   `max` and `min` must be given at least one argument.
-*   And they must be given things that can meaningfully be compared.
-
-~~~
-print(max(1, 'a'))
-~~~
-{: .python}
-~~~
-TypeError: unorderable types: str() > int()
-~~~
-{: .error}
-
-## Functions may have default values for some arguments.
-
-*   `round` will round off a floating-point number.
-*   By default, rounds to zero decimal places.
-
-~~~
-round(3.712)
-~~~
-{: .python}
-~~~
-4
-~~~
-{: .output}
-
-*   We can specify the number of decimal places we want.
-
-~~~
-round(3.712, 1)
-~~~
-{: .python}
-~~~
-3.7
-~~~
-{: .output}
 
 ## Use the built-in function `help` to get help for a function.
 
 *   Every built-in function has online documentation.
 
 ~~~
-help(round)
+help(len)
 ~~~
 {: .python}
 ~~~
-Help on built-in function round in module builtins:
+Help on built-in function len in module builtins:
 
-round(...)
-    round(number[, ndigits]) -> number
-
-    Round a number to a given precision in decimal digits (default 0 digits).
-    This returns an int when called with one argument, otherwise the
-    same type as the number. ndigits may be negative.
+len(obj, /)
+    Return the number of items in a container.
 ~~~
 {: .output}
 
@@ -222,55 +170,6 @@ result of print is None
 ~~~
 {: .output}
 
-> ## What Happens When
->
-> 1. Explain in simple terms the order of operations in the following program:
->    when does the addition happen, when does the subtraction happen,
->    when is each function called, etc.
-> 2. What is the final value of `radiance`?
->
-> ~~~
-> word = 'blah '
-> word = max(min(word * 2 + 'blur ', 'aaah '), 'ping')
-> print(word)
-> ~~~
-> {: .python}
->
-> > ## Solution
-> >
-> > ~~~
-> > ping
-> > ~~~
->{: .solution}
-{: .challenge}
-
-> ## Spot the Difference
->
-> 1. Predict what each of the `print` statements in the program below will print.
-> 2. Does `max(len(rich), poor)` run or produce an error message?
->    If it runs, does its result make any sense?
->
-> ~~~
-> rich = "gold"
-> poor = "tin"
-> print(max(rich, poor))
-> print(max(len(rich), len(poor)))
-> ~~~
-> {: .python}
->
-> > ## Solution
-> >
-> > ~~~
-> > tin
-> > 4
-> > ~~~
->{: .solution}
-{: .challenge}
-
-> ## Why Not?
->
-> Why don't `max` and `min` return `None` when they are given no arguments?
-{: .challenge}
 
 > ## Last Character of a String
 >
