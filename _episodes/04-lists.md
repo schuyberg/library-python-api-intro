@@ -151,34 +151,6 @@ goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 
 
 
-> ## Fill in the Blanks
->
-> Fill in the blanks so that the program below produces the output shown.
->
-> ~~~
-> values = ____
-> values.____(1)
-> values.____(3)
-> values.____(5)
-> print('first time:', values)
-> values = values[____]
-> print('second time:', values)
-> ~~~
-> {: .python}
->
-> ~~~
-> first time: [1, 3, 5]
-> second time: [3, 5]
-> ~~~
-> {: .output}
-{: .challenge}
-
-> ## How Large is a Slice?
->
-> If 'low' and 'high' are both non-negative integers,
-> how long is the list `values[low:high]`?
-{: .challenge}
-
 > ## From Strings to Lists and Back
 >
 > Given this:
