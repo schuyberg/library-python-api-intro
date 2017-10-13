@@ -2,6 +2,12 @@
 title: "END?"
 teaching: 0
 exercises: 0
+questions : 
+    - "Why here? Why now?"
+objectives: 
+    - "Ending on time."
+keypoints:
+    - "Your journey has just begun..."
 ---
 
 ## That's all for today folks.
