@@ -3,22 +3,14 @@
 {% endcomment %}
 <footer>
   <div class="row">
-    <div class="col-md-6" align="left">
-      <h4>
-	Copyright &copy; 2016–{{ 'now' | date: "%Y" }}
-	{% if site.carpentry == "swc" %}
-	<a href="{{ site.swc_site }}">Software Carpentry Foundation</a>
-	{% elsif site.carpentry == "dc" %}
-	<a href="{{ site.dc_site }}">Data Carpentry</a>
-	{% elsif site.carpentry == "lc" %}
-	<a href="{{ site.lc_site }}">Library Carpentry</a>
-	{% endif %}
-      </h4>
+    <div class="col-md-6">
+        <p>This lesson is *not* an official Library Carpentry course, that would probably be much better.</p>
     </div>
     <div class="col-md-6" align="right">
       <h4>
-		  Adapted from <a href="https://data-lessons.github.io/library-python-intro/">Library Python Intro</a>
+		  Adapted from the Library Carpentry's <a href="https://data-lessons.github.io/library-python-intro/">Library Python Intro</a>
 	  </h4>
+
     </div>
   </div>
 </footer>

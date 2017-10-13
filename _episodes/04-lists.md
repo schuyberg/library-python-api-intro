@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 teaching: 10
-exercises: 10
+exercises: 5
 questions:
 - "How can I store multiple values?"
 objectives:
@@ -216,27 +216,6 @@ goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 > {: .python}
 {: .challenge}
 
-> ## Sort and Sorted
->
-> What do these two programs print?
-> In simple terms, explain the difference between `sorted(letters)` and `letters.sort()`.
->
-> ~~~
-> # Program A
-> letters = list('gold')
-> result = sorted(letters)
-> print('letters is', letters, 'and result is', result)
-> ~~~
-> {: .python}
->
-> ~~~
-> # Program B
-> letters = list('gold')
-> result = letters.sort()
-> print('letters is', letters, 'and result is', result)
-> ~~~
-> {: .python}
-{: .challenge}
 
 > ## Copying (or Not)
 >

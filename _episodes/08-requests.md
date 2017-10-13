@@ -117,8 +117,8 @@ AUTHOR
 *   Save the response by assigning the request to a variable:
 
 ~~~
-oc_home = requests.get('https://open.library.ubc.ca')
-print(oc_home)
+response = requests.get('https://open.library.ubc.ca') # calling the output of a request "response" is a convention
+print(response)
 ~~~
 {: .python}
 
@@ -139,8 +139,8 @@ print(oc_home)
 *   `request.json()` will decode an endpoint that returns JSON data (more on that soon)
 
 ~~~
-print(oc_home.url)
-print(oc_home.text[:1000]) # this can be really long, so we'll ask for only the first 1000 characters of it.
+print(response.url)
+print(response.text[:1000]) # this can be really long, so we'll ask for only the first 1000 characters of it.
 ~~~
 {: .python}
 
@@ -193,8 +193,8 @@ https://open.library.ubc.ca/
 *   Do you recognize this? Is this useful?
 
 ~~~
-print(oc_home.url)
-print(oc_home.json())
+print(response.url)
+print(response.json())
 ~~~
 {: .python}
 
@@ -213,7 +213,7 @@ https://open.library.ubc.ca/
 *   Any web address will return its data to a GET request, but sifting through it to get to any meaningful information is tedious.
 *   API (Anyone know what it stands for?) endpoints return raw data without all of the HTML markup.
     *   Commonly as JSON or XML. These are easier to work with programmatically.
-*   UBC Library's Open Collections (OC) has a [public API](https://open.library.ubc.ca/research) at `oc-index.library.ubc.ca`
+*   UBC Library's Open Collections (OC) has a [public API](https://open.library.ubc.ca/docs) at `oc-index.library.ubc.ca`
 
 
 ~~~
@@ -237,13 +237,14 @@ https://oc-index.library.ubc.ca/collections
 ## Use `json` to Make JSON More Legible
 
 *   `json` is a library for making it easier to work with JSON data in Python.
-*   It can be used to "pretty print" JSON data to make it easier for humans to read:
+*   It can be used to "pretty print" JSON data to make it easier for humans to read
+    *   Use the 'indent' argument to add spaces to structure the data.
 
 
 ~~~
 import json
 
-human_readable = json.dumps(oc_collections.json(), indent="    ")
+human_readable = json.dumps(oc_collections.json(), indent=2*" ")
 print(human_readable)
 ~~~
 {: .python}
@@ -586,3 +587,48 @@ https://oc-index.library.ubc.ca/collections
 {: .output}
 
 
+> ## Print the collection metadata for the Open Collection's 'arkley' collection
+>
+> The Open Collections API documentation has a list of available endpoints and examples at [https://open.library.ubc.ca/docs#api-requests](https://open.library.ubc.ca/docs#api-requests). 
+> Use a GET request to return and then "pretty print" the metadata associated with the 'arkley' collection. What is its overarching theme?
+>
+> > ## Solution
+> >
+> > `import json, requests`
+> > `response = requests.get('https://oc-index.library.ubc.ca/collections/arkley')`
+> > `print(json.dumps(response.json(), indent=2*" "))`
+> {: .solution}
+{: .challenge}
+
+
+> ## Print the metadata for an item from Open Collection's 'arkley' collection
+> 
+> Use a GET request to return and then "pretty print" the metadata associated with a specific item from the 'arkley' collection. 
+> Hint: You can request a list of the first 100 items in the collection at https://oc-web.library.ubc.ca/collections/arkley/items?limit=100
+>
+> > ## Solution
+> >
+> > `import json, requests`
+> > `items = requests.get(https://oc-web.library.ubc.ca/collections/arkley/items?limit=100)`
+> > `print(json.dumps(response.json(), indent=2*" "))`
+> > `# copy an item id`
+> > `response = requests.get('https://oc-index.library.ubc.ca/collections/arkley/items/')`
+> > `print(json.dumps(response.json(), indent=2*" "))`
+> {: .solution}
+{: .challenge}
+
+
+> ## Print the item's description
+> 
+> 
+>
+> > ## Solution
+> >
+> > `import json, requests`
+> > `items = requests.get(https://oc-web.library.ubc.ca/collections/arkley/items?limit=100)`
+> > `print(json.dumps(response.json(), indent=2*" "))`
+> > `# copy an item id`
+> > `response = requests.get('https://oc-index.library.ubc.ca/collections/arkley/items/')`
+> > `print(json.dumps(response.json(), indent=2*" "))`
+> {: .solution}
+{: .challenge}

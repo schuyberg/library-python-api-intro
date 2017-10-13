@@ -1,7 +1,7 @@
 ---
 title: "Variables and Assignment"
 teaching: 10
-exercises: 10
+exercises: 5
 questions:
 - "How can I store data in programs?"
 objectives:
@@ -185,27 +185,6 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > initial = "right"
 > ~~~
 > {: .python}
-{: .challenge}
-
-> ## Challenge
->
-> If you assign `a = 123`,
-> what happens if you try to get the second digit of `a`?
->
-> > ## Solution
-> > Numbers are not stored in the written representation,
-> > so they can't be treated like strings.
-> >
-> > ~~~
-> > a = 123
-> > print(a[1])
-> > ~~~
-> > {: .python}
-> > ~~~
-> > TypeError: 'int' object is not subscriptable
-> > ~~~
-> > {: .error}
-> {: .solution}
 {: .challenge}
 
 > ## Choosing a Name
