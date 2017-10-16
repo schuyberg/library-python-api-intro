@@ -6,7 +6,7 @@ questions:
 - "How can I represent more complex datasets?"
 objectives:
 - "Use a dictionary to represent complex, nested datasets"
-- "Retrive data from a dictionary at any level of its hierarchy"
+- "Retrieve data from a dictionary at any level of its hierarchy"
 keypoints:
 - "Every item in a dictionary has its own unique key"
 - "Dictionaries can hold any kind of item, including lists and other dictionaries"
