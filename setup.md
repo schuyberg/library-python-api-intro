@@ -19,7 +19,7 @@ you are ready to go as soon as the workshop begins.
 
 ### Windows - [Video tutorial][video-windows]
 
-1. Open [http://continuum.io/downloads][continuum-windows]
+1. Open https://www.anaconda.com/distribution/][continuum-windows]
    with your web browser.
 
 2. Download the Python 3 installer for Windows.
@@ -30,7 +30,7 @@ you are ready to go as soon as the workshop begins.
 
 ### macOS - [Video tutorial][video-mac]
 
-1. Open [http://continuum.io/downloads][continuum-mac]
+1. Open [https://www.anaconda.com/distribution/][continuum-mac]
    with your web browser.
 
 2. Download the Python 3 installer for macOS.
