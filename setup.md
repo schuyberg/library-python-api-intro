@@ -42,7 +42,7 @@ you are ready to go as soon as the workshop begins.
 Note that the following installation steps require you to work from the shell. 
 If you run into any difficulties, please request help before the workshop begins.
 
-1.  Open [http://continuum.io/downloads][continuum-linux] with your web browser.
+1.  Open https://www.anaconda.com/distribution/ with your web browser.
 
 2.  Download the Python 3 installer for Linux.
 
