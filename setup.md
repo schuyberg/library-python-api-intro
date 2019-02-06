@@ -19,7 +19,7 @@ you are ready to go as soon as the workshop begins.
 
 ### Windows - [Video tutorial][video-windows]
 
-1. Open https://www.anaconda.com/distribution/][continuum-windows]
+1. Open [https://www.anaconda.com/distribution/][continuum-windows]
    with your web browser.
 
 2. Download the Python 3 installer for Windows.
