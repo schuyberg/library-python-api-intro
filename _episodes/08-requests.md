@@ -621,12 +621,12 @@ print(human_readable)
 > ## Print the metadata for an item from Open Collection's 'arkley' collection
 > 
 > Use a GET request to return and then "pretty print" the metadata associated with a specific item from the 'arkley' collection. 
-> Hint: You can request a list of the first 100 items in the collection at https://oc-web.library.ubc.ca/collections/arkley/items?limit=100
+> Hint: You can request a list of the first 100 items in the collection at https://oc-index.library.ubc.ca/collections/arkley/items?limit=100
 >
 > > ## Solution
 > >
 > > `import json, requests`
-> > `items = requests.get(https://oc-web.library.ubc.ca/collections/arkley/items?limit=100)`
+> > `items = requests.get(https://oc-index.library.ubc.ca/collections/arkley/items?limit=100)`
 > > `print(json.dumps(response.json(), indent=2*" "))`
 > > `# copy an item id`
 > > `response = requests.get('response = requests.get('https://oc-index.library.ubc.ca/collections/arkley/items/1.0010491')')`
